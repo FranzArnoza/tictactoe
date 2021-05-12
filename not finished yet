@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class TicTacToe {
+	char board[][]=new char [3][3]; 
+	//Display Function
+	public static void Display(char board[][]) {
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				System.out.print(board[i][j]+"");
+			}
+			System.out.println();
+		}
+	}
+	//Main Function
+	public static void main (String[] args) {
+		//(2)Select Player Name & Player Marker From UserDataHandler
+		Scanner in=new Scanner(System.in);
+		//Take player name
+		String player1,player2;
+		System.out.print("Enter Player 1 Name:"+player1);
+		player1=in.nextLine();
+		System.out.print("Enter Player 2 Name:"+player2);
+		player2=in.nextLine();
+		//Take Player Marker
+		char playwe1Marker,player2Marker;
+		System.out.print(player1+"select Marker (x or o): ");
+		player1Marker=in.nextLine().charAt(0);
+		while(player1Marker !='x' && player1Marker != 'x' && playerMaker != 'o' && player1Marker != 'o')
+		{
+			System.out.print("Invalid Input, Enter Correct Marker Stmbol: ");
+			player1Marker=in.nextLine().charAt(o);
+		}
+		//When player 1 Select Marker then we associate remaining symbol or marker to player 2
+		if(player1Marker == 'x' || player1Marker == 'x')
+			player2Marker = 'o';
+		else
+			player2Marker = 'x';
+		//To access board data members. First make object of class
+		TicTacToe game=new TicTacToe();
+		//(1)Display Pattern
+		//Initialize Pattern or Board
+		int counter=0;
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				//Character.forDigit method returns the char representation of the specified digit in the specified radix.
+				game.board[i][j]=Character.forDigit(counter++,10);
+			}
+		}
+		Display(game.board);
+		//Take User Choice
+		char choice;
+		for(int i=0;i<4;i++) {
+			System.out.print(player1+"Turn: ");
+			Chouce=in.next() .charAt(0);
+			//Now wereplace the user/player choice with player selected marker
+		}
+	}
+}
